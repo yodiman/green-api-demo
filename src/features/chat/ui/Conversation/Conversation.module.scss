@@ -6,6 +6,26 @@
   min-height: 0;
   height: 100%;
   overflow: hidden;
+  background-color: var(--color-messages-background);
+  background-image: linear-gradient(to bottom, rgb(0 179 234 / 0.6), rgb(147 242 255 / 0.4));
+  isolation: isolate;
+}
+
+.conversation::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url('./assets/chat-background.png');
+  background-position: left top;
+  background-repeat: repeat;
+  content: '';
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.conversation > * {
+  position: relative;
+  z-index: 1;
 }
 
 .header {
@@ -15,6 +35,7 @@
   gap: var(--space-md);
   padding: var(--space-lg) var(--space-xl);
   border-bottom: 1px solid var(--color-divider);
+  background: var(--color-surface);
 }
 
 .contact {
@@ -64,7 +85,8 @@
   margin-top: auto;
 }
 
-.empty {
+.empty,
+.noSelection {
   display: grid;
   max-width: 270px;
   margin: auto;
@@ -75,21 +97,32 @@
   text-align: center;
 }
 
+.empty strong,
+.noSelection {
+  color: #272c31;
+  font-weight: 700;
+}
+
 .empty strong {
   margin-bottom: 8px;
-  color: #272c31;
+}
+
+.composerPanel {
+  width: 100%;
+  padding: var(--space-md) var(--space-lg) 18px;
 }
 
 .composer {
   display: flex;
-  width: calc(100% - 32px);
+  width: 100%;
   max-width: 800px;
   gap: 10px;
   align-items: end;
-  margin: 0 auto 18px;
+  margin: 0 auto;
   padding: var(--space-sm) 10px var(--space-sm) var(--space-lg);
   border: 1px solid var(--color-border);
   border-radius: 20px;
+  background: var(--color-surface);
   box-shadow: 0 5px 20px rgba(30, 42, 54, 0.08);
 }
 
@@ -98,17 +131,11 @@
 }
 
 .composerError {
-  width: calc(100% - 32px);
+  width: 100%;
   max-width: 800px;
-  margin: 0 auto var(--space-md);
+  margin: var(--space-sm) auto 0;
   color: var(--color-danger);
   font-size: 13px;
-}
-
-.noSelection {
-  display: grid;
-  color: var(--color-text-muted);
-  place-items: center;
 }
 
 @media (max-width: 700px) {
@@ -133,12 +160,11 @@
     padding: 18px var(--space-md);
   }
 
-  .composer {
-    width: calc(100% - 20px);
-    margin: 0 10px 10px;
+  .composerPanel {
+    padding: 10px;
   }
 
-  .composerError {
-    width: calc(100% - 20px);
+  .composer {
+    width: 100%;
   }
 }

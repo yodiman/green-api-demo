@@ -94,16 +94,18 @@ export function Conversation({ chat, onBack }: ConversationProps) {
                 ))}
             </div>
           </div>
-          <form className={styles.composer} onSubmit={handleSubmit}>
-            <MessageTextarea value={text} onChange={setText} />
-            <IconButton
-              icon="arrow-up"
-              disabled={sendMessage.isPending || !text.trim()}
-              type="submit"
-              aria-label="Отправить"
-            />
-          </form>
-          {sendMessage.error ? <p className={styles.composerError} role="alert">{sendMessage.error.message}</p> : null}
+          <div className={styles.composerPanel}>
+            <form className={styles.composer} onSubmit={handleSubmit}>
+              <MessageTextarea value={text} onChange={setText} />
+              <IconButton
+                icon="arrow-up"
+                disabled={sendMessage.isPending || !text.trim()}
+                type="submit"
+                aria-label="Отправить"
+              />
+            </form>
+            {sendMessage.error ? <p className={styles.composerError} role="alert">{sendMessage.error.message}</p> : null}
+          </div>
         </>
       )}
     </section>
