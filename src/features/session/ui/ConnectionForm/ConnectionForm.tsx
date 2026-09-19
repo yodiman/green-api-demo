@@ -77,6 +77,7 @@ export function ConnectionForm() {
             placeholder="https://..."
             type="url"
             required
+            autoFocus
             defaultValue={defaultCredentials.apiUrl}
             aria-invalid={Boolean(state.fieldErrors.apiUrl)}
             aria-describedby={state.fieldErrors.apiUrl ? 'api-url-error' : undefined}
