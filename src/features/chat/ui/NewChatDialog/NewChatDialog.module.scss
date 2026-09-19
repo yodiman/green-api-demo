@@ -1,0 +1,79 @@
+.backdrop {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: var(--space-xl);
+  overflow-y: auto;
+  border: 0;
+  background: transparent;
+}
+
+.backdrop[open] {
+  display: grid;
+  place-items: center;
+}
+
+.backdrop::backdrop {
+  background: rgba(18, 24, 30, 0.35);
+}
+
+.dialog {
+  display: grid;
+  width: min(100%, 380px);
+  gap: 14px;
+  padding: var(--space-2xl);
+  border-radius: 20px;
+  background: var(--color-surface);
+  box-shadow: 0 20px 60px rgba(18, 24, 30, 0.2);
+}
+
+.dialog h2,
+.dialog p {
+  margin: 0;
+}
+
+.dialog p {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+}
+
+.dialog label {
+  display: grid;
+  gap: 7px;
+  font-weight: 600;
+}
+
+.dialog input {
+  padding: var(--space-md);
+  border: 1px solid var(--color-border-strong);
+  border-radius: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin-top: 4px;
+}
+
+.actions button {
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #f0f2f4;
+  cursor: pointer;
+}
+
+.actions .primaryButton {
+  color: var(--color-text-on-accent);
+  background: var(--color-accent);
+}
+
+.error {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: 13px;
+}

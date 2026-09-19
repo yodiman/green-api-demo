@@ -1,0 +1,28 @@
+.shell {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.notificationError {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 3;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  color: var(--color-danger);
+  background: var(--color-danger-subtle);
+  box-shadow: 0 5px 20px rgba(30, 42, 54, 0.1);
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .shell {
+    display: block;
+  }
+}

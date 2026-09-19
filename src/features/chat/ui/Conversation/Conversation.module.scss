@@ -1,0 +1,144 @@
+.conversation {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 82px;
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.contact {
+  display: grid;
+  gap: 3px;
+}
+
+.desktopDisconnect {
+  margin-left: auto;
+}
+
+.header small {
+  color: var(--color-text-muted);
+}
+
+.backButton {
+  display: none;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  color: #252a30;
+  background: transparent;
+  cursor: pointer;
+  font-size: 35px;
+  line-height: 1;
+}
+
+.messages {
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.messageContent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  min-height: 100%;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.messageContent > :first-child {
+  margin-top: auto;
+}
+
+.empty {
+  display: grid;
+  max-width: 270px;
+  margin: auto;
+  padding: 26px;
+  border-radius: 18px;
+  color: #777f88;
+  background: #f3f4f5;
+  text-align: center;
+}
+
+.empty strong {
+  margin-bottom: 8px;
+  color: #272c31;
+}
+
+.composer {
+  display: flex;
+  width: calc(100% - 32px);
+  max-width: 800px;
+  gap: 10px;
+  align-items: end;
+  margin: 0 auto 18px;
+  padding: var(--space-sm) 10px var(--space-sm) var(--space-lg);
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(30, 42, 54, 0.08);
+}
+
+.composer:focus-within {
+  border-color: #b8c0c8;
+}
+
+.composerError {
+  width: calc(100% - 32px);
+  max-width: 800px;
+  margin: 0 auto var(--space-md);
+  color: var(--color-danger);
+  font-size: 13px;
+}
+
+.noSelection {
+  display: grid;
+  color: var(--color-text-muted);
+  place-items: center;
+}
+
+@media (max-width: 700px) {
+  .conversation {
+    display: none;
+    height: 100%;
+  }
+
+  .activeOnMobile {
+    display: grid;
+  }
+
+  .backButton {
+    display: block;
+  }
+
+  .desktopDisconnect {
+    display: none;
+  }
+
+  .messages {
+    padding: 18px var(--space-md);
+  }
+
+  .composer {
+    width: calc(100% - 20px);
+    margin: 0 10px 10px;
+  }
+
+  .composerError {
+    width: calc(100% - 20px);
+  }
+}

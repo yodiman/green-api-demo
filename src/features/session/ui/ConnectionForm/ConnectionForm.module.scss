@@ -1,0 +1,82 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  padding: var(--space-2xl);
+  place-items: center;
+}
+
+.card {
+  display: grid;
+  width: min(100%, 420px);
+  gap: var(--space-lg);
+  padding: var(--space-3xl);
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  background: var(--color-surface);
+  box-shadow: 0 20px 50px rgba(28, 42, 56, 0.08);
+}
+
+.logo {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  color: var(--color-text-on-accent);
+  background: linear-gradient(145deg, #117cff, #6c39e8);
+  font-size: 28px;
+  font-weight: 700;
+  place-items: center;
+}
+
+.kicker {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.card h1 {
+  margin: -8px 0 0;
+  font-size: 28px;
+}
+
+.description {
+  margin: -4px 0 4px;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+.card label {
+  display: grid;
+  gap: 7px;
+  color: #30353b;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.card input {
+  width: 100%;
+  padding: var(--space-md) 14px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 12px;
+  color: var(--color-text-primary);
+  background: #fbfcfd;
+}
+
+.card input[aria-invalid='true'] {
+  border-color: var(--color-danger);
+}
+
+.fieldError {
+  color: var(--color-danger);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.error {
+  margin: 0;
+  color: var(--color-danger);
+  font-size: 14px;
+}

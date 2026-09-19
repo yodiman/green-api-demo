@@ -1,0 +1,58 @@
+.message {
+  display: flex;
+  align-items: flex-end;
+  max-width: min(75%, 520px);
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 16px;
+  line-height: 1.35;
+}
+
+.message > span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.message time {
+  flex: 0 0 auto;
+  color: #7e8791;
+  font-size: 11px;
+  line-height: 1.35;
+  text-align: right;
+  transform: translateY(2px);
+  white-space: nowrap;
+}
+
+.incoming {
+  align-self: flex-start;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  box-shadow: 0 1px 3px rgba(30, 42, 54, 0.08);
+}
+
+.incoming + .incoming,
+.outgoing + .outgoing {
+  margin-top: -7px;
+}
+
+.outgoing {
+  align-self: flex-end;
+  color: #17242d;
+  background: var(--color-message-outgoing);
+}
+
+.outgoing time {
+  color: #0b80bd;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

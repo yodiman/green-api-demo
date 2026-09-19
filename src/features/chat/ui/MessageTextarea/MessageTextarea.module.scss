@@ -1,0 +1,16 @@
+.textarea {
+  flex: 1;
+  min-height: 28px;
+  max-height: 150px;
+  overflow-y: hidden;
+  resize: none;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.textarea:focus,
+.textarea:focus-visible {
+  outline: 0;
+  box-shadow: none;
+}
