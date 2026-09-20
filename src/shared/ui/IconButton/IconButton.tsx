@@ -14,7 +14,8 @@ const iconPaths = {
 
 export function IconButton({ className, icon, type = 'button', ...props }: IconButtonProps) {
   return (
-    <button className={`${styles.button} ${className ?? ''}`}
+    <button
+      className={`${styles.button} ${className ?? ''}`}
       type={type}
       {...props}
     >

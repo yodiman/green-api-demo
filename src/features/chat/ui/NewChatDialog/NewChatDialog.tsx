@@ -74,13 +74,15 @@ export function NewChatDialog({ onClose, onCreated }: NewChatDialogProps) {
       onCancel={handleCancel}
       onMouseDown={handleBackdropMouseDown}
     >
-      <form className={styles.dialog}
+      <form
+        className={styles.dialog}
         onSubmit={handleSubmit}
       >
         <h2 id="new-chat-title">Новый чат</h2>
         <p id="new-chat-description">Введите номер получателя с кодом +7 или +375.</p>
         <label htmlFor="new-chat-phone">Номер телефона</label>
-        <input autoFocus
+        <input
+          autoFocus
           ref={phoneInputRef}
           id="new-chat-phone"
           name="phone"
@@ -104,7 +106,8 @@ export function NewChatDialog({ onClose, onCreated }: NewChatDialogProps) {
         ) : null}
         <div className={styles.actions}>
           <button onClick={onClose} type="button">Отмена</button>
-          <button className={styles.primaryButton}
+          <button
+            className={styles.primaryButton}
             disabled={createChat.isPending}
             type="submit"
           >{createChat.isPending ? 'Проверка…' : 'Создать'}

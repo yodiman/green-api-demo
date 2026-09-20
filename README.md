@@ -2,7 +2,7 @@
 
 ## Как запустить
 
-Node.js 20.19 или новее. Проект проверен на Node.js 24.19.
+Node.js 22.18 или 24.11 и новее. Проект проверен на Node.js 24.19.
 
 ```bash
 npm ci
@@ -30,6 +30,10 @@ VITE_GREEN_API_POLLING_ERROR_DELAY_MS=2000
 npm run lint
 npm run build
 ```
+
+## React Compiler
+
+В проекте включён React Compiler. Он автоматически оптимизирует React-компоненты там, где это безопасно.
 
 ## Безопасность
 

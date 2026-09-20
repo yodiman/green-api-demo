@@ -5,7 +5,8 @@ export function SubmitButton() {
   const { pending } = useFormStatus()
 
   return (
-    <button className={styles.button}
+    <button
+      className={styles.button}
       disabled={pending}
       type="submit"
     >

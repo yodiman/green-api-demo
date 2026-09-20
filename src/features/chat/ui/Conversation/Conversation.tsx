@@ -57,7 +57,8 @@ export function Conversation({ chat, onBack }: ConversationProps) {
   return (
     <section className={className}>
       <header className={styles.header}>
-        <button className={styles.backButton}
+        <button
+          className={styles.backButton}
           onClick={onBack}
           type="button"
           aria-label="Вернуться к списку"

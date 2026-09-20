@@ -9,7 +9,8 @@ export function DisconnectButton() {
   }
 
   return (
-    <IconButton icon="log-out"
+    <IconButton
+      icon="log-out"
       onClick={handleClick}
       aria-label="Отключить"
     />

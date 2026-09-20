@@ -40,7 +40,8 @@ export function MessageTextarea({ value, onChange }: MessageTextareaProps) {
   }, [value])
 
   return (
-    <textarea className={styles.textarea}
+    <textarea
+      className={styles.textarea}
       ref={textarea}
       id="chat-message"
       name="message"

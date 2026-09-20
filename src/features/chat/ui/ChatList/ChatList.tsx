@@ -27,7 +27,8 @@ export function ChatList({ chats, selectedChatId, onSelect, onNew }: ChatListPro
           <h1>Чаты</h1>
         </div>
         <div className={styles.actions}>
-          <IconButton icon="plus"
+          <IconButton
+            icon="plus"
             onClick={onNew}
             aria-label="Создать чат"
           />
@@ -38,7 +39,8 @@ export function ChatList({ chats, selectedChatId, onSelect, onNew }: ChatListPro
       </header>
       <div className={styles.items}>
         {chats.length === 0 ? <p className={styles.empty}>Создайте первый чат по номеру телефона</p> : chats.map((chat) => (
-          <button className={`${styles.item} ${chat.chatId === selectedChatId ? styles.selected : ''}`}
+          <button
+            className={`${styles.item} ${chat.chatId === selectedChatId ? styles.selected : ''}`}
             key={chat.chatId}
             value={chat.chatId}
             onClick={handleSelect}

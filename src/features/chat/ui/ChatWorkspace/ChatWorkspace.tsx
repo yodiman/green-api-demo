@@ -32,7 +32,8 @@ export function ChatWorkspace() {
 
   return (
     <main className={styles.shell}>
-      <ChatList chats={chatList}
+      <ChatList
+        chats={chatList}
         selectedChatId={selectedChatId}
         onSelect={selectChat}
         onNew={handleNewChat}
@@ -49,7 +50,8 @@ export function ChatWorkspace() {
       }
 
       {isNewChatOpen
-        ? <NewChatDialog onClose={handleCloseDialog}
+        ? <NewChatDialog
+          onClose={handleCloseDialog}
           onCreated={handleChatCreated}
         />
         : null

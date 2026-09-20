@@ -34,6 +34,7 @@ export default tseslint.config(
       }],
       '@stylistic/jsx-closing-bracket-location': ['error', 'line-aligned'],
       '@stylistic/jsx-closing-tag-location': 'error',
+      '@stylistic/jsx-first-prop-new-line': ['error', 'multiline'],
       '@stylistic/jsx-max-props-per-line': ['error', { maximum: { single: 2, multi: 1 } }],
       '@stylistic/lines-between-class-members': ['error', 'always'],
       '@stylistic/padding-line-between-statements': [
